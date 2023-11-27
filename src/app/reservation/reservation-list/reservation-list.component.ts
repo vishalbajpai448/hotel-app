@@ -13,7 +13,12 @@ export class ReservationListComponent implements OnInit{
   reservations:Reservation[] = [];
   
   ngOnInit(): void {
-   this.reservations=this.reservationService.getReservations();
+   this.reservationService.getReservations().subscribe(reservations => 
+    {
+      this.reservations = reservations;
+      console.log(reservations);
+      
+    });
   }
 
   constructor(private reservationService: ReservationService)
@@ -23,7 +28,8 @@ export class ReservationListComponent implements OnInit{
 
   deleteReservation(id:string) 
   {
-    this.reservationService.deleteReservation(id);
+    this.reservationService.deleteReservation(id).subscribe(()=>{console.log("Deleted");
+    });
   }
 
 }

@@ -1,0 +1,12 @@
+{
+  "reservations": [
+    {
+      "checkInDate": "2023-11-10",
+      "checkOutDate": "2023-12-01",
+      "guestName": "dd",
+      "guestEmail": "s@to.vo",
+      "roomNumber": 123,
+      "id": 1
+    }
+  ]
+}
